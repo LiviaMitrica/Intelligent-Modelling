@@ -1,0 +1,428 @@
+%latex model.tex
+%bibtex model
+%latex model.tex
+%latex model.tex
+%pdflatex model.tex
+
+%it's possible to work online (e.g. www.overleaf.com)
+
+
+\documentclass[runningheads,a4paper,11pt]{report}
+
+\usepackage{algorithmic}
+\usepackage{algorithm} 
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{comment} 
+\usepackage{epsfig} 
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{geometry} 
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref} 
+\usepackage[latin1]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow} 
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+\geometry{a4paper,top=3cm,left=2cm,right=2cm,bottom=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Project's name}
+\fancyhead[RE,LO]{Author's name}
+\fancyfoot[RE,LO]{DS - Intelligent Modeling 2022-2023}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \footrulewidth\hfill}}
+
+\hypersetup{
+pdftitle={artTitle},
+pdfauthor={name},
+pdfkeywords={pdf, latex, tex, ps2pdf, dvipdfm, pdflatex},
+bookmarksnumbered,
+pdfstartview={FitH},
+urlcolor=cyan,
+colorlinks=true,
+linkcolor=red,
+citecolor=green,
+}
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\linespread{1}
+\makeindex
+
+
+\begin{document}
+
+\begin{titlepage}
+\sloppy
+
+\begin{center}
+BABE\c S BOLYAI UNIVERSITY, CLUJ NAPOCA, ROM\^ ANIA
+
+FACULTY OF MATHEMATICS AND COMPUTER SCIENCE
+
+\vspace{6cm}
+
+\Huge \textbf{Detection of cognitive distortions}
+
+\vspace{1cm}
+
+\normalsize -- DS - Intelligent Modeling report --
+
+\end{center}
+
+
+\vspace{5cm}
+
+\begin{flushright}
+\Large{\textbf{Authors}}\\
+Mitrica Livia-Maria, Data Science \\
+Avasilinei Ariana-Maria, Data Science
+\end{flushright}
+
+\vspace{4cm}
+
+\begin{center}
+2022-2023
+\end{center}
+
+\end{titlepage}
+
+\pagenumbering{gobble}
+
+\begin{abstract}
+	Text of abstract. Short info about: 
+	\begin{itemize}
+		\item project relevance/importance, 
+		\item inteligent methods used for solving, 
+		\item data involved in the numerical experiments; 
+		\item conclude by the the results obtained.
+		\item Please add a graphical abstract of your work. 
+	\end{itemize}
+
+	
+
+\noindent
+\textbf{\textcolor{green}{Remind that a good report should:}}
+\begin{itemize}	
+	\item be fun to read with many figures and visualizations;
+	\item be easy to follow even for AI/ML novice;
+	\item clearly convey the potential of AI/ML to the application domain;
+	\item around 10 minutes to read (although this is not a hard constraint).
+\end{itemize}
+
+\end{abstract}
+
+
+\tableofcontents
+
+\newpage
+
+\listoftables
+\listoffigures
+\listofalgorithms
+
+\newpage
+
+\setstretch{1.5}
+
+
+
+\newpage
+
+\pagenumbering{arabic}
+
+
+\chapter{Introduction}
+\label{chapter:introduction}
+
+\section{What? Why? How?}
+\label{section:what}
+
+The project focuses on developing intelligent models capable of detecting cognitive distortions in textual data. Cognitive distortions are irrational or biased ways of thinking that can negatively impact mental well-being.
+
+Cognitive distortions are common in various mental health conditions such as depression, anxiety, and stress. Detecting and addressing these distortions early can lead to better mental health outcomes. Intelligent models can automate this process, making it more scalable and accessible.
+
+The project involves using an already annotated dataset of texts containing instances of cognitive distortions. This data will be preprocessed and used to train intelligent models, leveraging techniques from natural language processing (NLP) and machine learning. Various methods including Logistic regression, Support vector machines and BERT will be explored. The trained models will then be evaluated, refined, and deployed into user-friendly applications or platforms for practical use.
+
+\section{Paper structure and original contribution(s)}
+\label{section:structure}
+
+The research presented in this paper advances the theory, design, and implementation of several particular models. 
+
+The main contribution of this report is to present an intelligent algorithm for solving the problem of $\ldots$.
+
+The second contribution of this report consists of building an intuitive, easy-to-use and user
+friendly software application. Our aim is to build an algorithm that will help $\ldots$.
+
+The third contribution of this thesis consists of $\ldots$.
+
+The present work contains $xyz$ bibliographical references and is structured in five chapters as follows.
+
+The first chapter/section is a short introduction in $\ldots$.
+
+The second chapter/section describes $\ldots$.
+
+The chapter/section \ref{chapter:proposedApproach} details $\ldots$.
+
+
+
+\chapter{Scientific Problem}
+\label{section:scientificProblem}
+
+
+\section{Problem definition}
+\label{section:problemDefinition}
+
+Give a description of the problem.
+Explain why it must be solved by an intelligent algorithm. 
+Details the advantages and/or disadvantages of solving the problem by a (some) given method(s).
+
+Precisely define the problem you are addressing (i.e. formally specify the inputs and outputs). Elaborate on why this is an interesting and important problem.
+
+
+
+
+\chapter{State of the art/Related work}
+\label{chapter:stateOfArt}
+
+The same problem is treated in a research paper by Shreevastava, S., \& Foltz, P. The methods used in their research include Logistic regression, Support vector machines, Decision trees, K- Nearest Neighbors (k = 15) and Multi-Layer Perceptron (with a single hidden layer having 100 units). For feature selection they apply the following techniques: Smooth Inverse Frequency (SIF), Sentence-BERT (Bidirectional Encoder Representations from Transformers), Linguistic Inquiry and Word Count(LIWC) Features, Parts of Speech (POS) tag embeddings. The best results were given by pretrained Sentence-BERT embeddings used to train a SVM classifier.
+
+The theory of the methods utilised until now in order to solve the given problem.
+
+A similar issue, but with texts in Chinese is subject of research by Wang, B., Deng, P., Zhao, Y., \& Qin, B. In order to solve the issue they employed the following models Bert  
+Roberta, XLnet, Electra, ChatGPT (Zero-shot) and ChatGPT (Few-shot).
+
+Another related research but this time in Arabic was conducted by Alhaj, F., Al-Haj, A., Sharieh, A., \& Jabri, R. They relied on Twitter messages as their dataset, as oppose to therapist questions. The methods they used include BERTopic, DT, SVM , RF, KNN, XGBoost, Bagging and Stacking.
+
+\begin{itemize}
+	\item What is their problem and method? 
+	\item How is your problem and method different? 
+	\item Why is your problem and method better?
+\end{itemize}
+
+In order to cite a given work you can use a bib file (see the example) and the $\ $ \textit{cite} command:
+\cite{kennedy1}, \cite{Koh06}, \cite{Berlekamp82}, \cite{Storn95}, \cite{firefox}.
+
+
+
+\chapter{Investigated approach}
+\label{chapter:proposedApproach}
+
+\section{Proposed approach - methodology}
+\label{section:ProposedApproach}
+
+Describe your approach!
+
+\begin{itemize}
+	\item Exploratory data Analysis
+	\item Training and testing the model
+	\item Validation and comparisons
+\end{itemize}
+
+Describe in reasonable detail the algorithm you are using to address this problem. A psuedocode description of the algorithm you are using is frequently useful. Trace through a concrete example, showing how your algorithm processes this example. The example should be complex enough to illustrate all of the important aspects of the problem but simple enough to be easily understood. If possible, an intuitively meaningful example is better than one with meaningless symbols.
+
+
+\section{Numerical validation}
+\label{section:numericalValidaion}
+
+
+Explain the experimental methodology and the numerical results obtained with your approach and the state of art approache(s).
+
+Try to perform a comparison of several approaches.
+
+Statistical validation of the results.
+
+
+\subsection{Methodology}
+\label{section:methodology}
+
+\begin{itemize}
+	\item What are criteria you are using to evaluate your method? 
+	\item What specific hypotheses does your experiment test? Describe the experimental methodology that you used. 
+	\item What are the dependent and independent variables? 
+	\item What is the training/test data that was used, and why is it realistic or interesting? Exactly what performance data did you collect and how are you presenting and analyzing it? Comparisons to competing methods that address the same problem are particularly useful.
+\end{itemize}
+
+\subsection{Data}
+\label{section:data}
+
+The data consists of 2530 entries with 4 columns, namely Patient Question, Distorted part, Dominant Distortion and Secondary Distortion (Optional).
+
+\begin{itemize}
+\item Patient Question: The full response the patients gave to the question.
+\item Distorted part: The annotators were asked to select the sentences that indicated the presence of some distorted thinking. This column was left empty if no distortion was detected in a Patient's question.
+\item Dominant Distortion: Due to the subjective nature of the task, it is not necessary that a single input will only contain a single distortion. The annotators were asked to select the most dominant distortion in the input for this column. If no distorion was detected then this column contains "No distortion".
+\item Secondary distortion (Optional): This option was given to the annotators if they could not decide which the dominant distortion was among two types of cognitive distortions. If they could identify a single dominant distorion or if there was no distoriton detected, then this field was left empty.
+\end{itemize}
+
+Types of Distortions marked in the dataset:
+
+\begin{itemize}
+\item All-or-nothing thinking
+\item Overgeneralization
+\item Mental filter
+\item Should statements
+\item Labeling
+\item Personalization
+\item Magnification
+\item Emotional Reasoning
+\item Mind Reading
+\item Fortune-telling
+\end{itemize}
+
+Out of the entire entries, 63.1\% include distorted parts, while 36.9 have no detected distortions.
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/presence_distrib.png}
+\caption{Presence of distortions distribution}
+\label{fig:presence_distrib}                                
+\end{figure}
+
+The most frequent distortion is Mind Reading and the least frequent is All-Or-Nothing Thinking.
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/freq_distrib.png}
+\caption{F distribution}
+\label{fig:freq_distrib}                                
+\end{figure}
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/avg_question_len.png}
+\caption{F distribution}
+\label{fig:avg_question_len}                                
+\end{figure}
+
+\subsection{Results}
+\label{section:results}
+
+Present the quantitative results of your experiments. Graphical data presentation such as graphs and histograms are frequently better than tables. What are the basic differences revealed in the data. Are they statistically significant?
+
+\section{Discussion}
+\label{section:discussion}
+
+\begin{itemize}
+	\item Is your hypothesis supported? 
+	\item What conclusions do the results support about the strengths and weaknesses of your method compared to other methods? 
+	\item How can the results be explained in terms of the underlying properties of the algorithm and/or the data. 
+\end{itemize}
+
+
+
+
+\chapter{Conclusion and future work}
+\label{chapter:concl}
+
+Try to emphasise the strengths and the weaknesses of your approach.
+What are the major shortcomings of your current method? For each shortcoming, propose additions or enhancements that would help overcome it. Add all four components of a SWOT analysis. 
+
+Briefly summarize the important results and conclusions presented in the paper. 
+
+\begin{itemize}
+	\item What are the most important points illustrated by your work? 
+	\item How will your results improve future research and applications in the area? 
+\end{itemize}
+
+
+\chapter{Latex examples}
+
+Item example: 
+
+\begin{itemize}
+	\item content of item1
+ 	\item content of item2
+ 	\item content of item3
+\end{itemize}
+
+
+
+Figure example 
+
+$\ldots$ (see Figure \ref{swarmsize})
+
+\begin{figure}[htbp]
+	\centerline{\includegraphics{Fig/FitEvol.eps}}  
+	\caption{The evolution of the swarm size during the GA generations. This results were obtained for the $f_2$ test function with 5 dimensions.}
+	\label{swarmsize}
+\end{figure}
+
+
+Table example: (see Table \ref{tab3PSO})
+
+
+\begin{table}[htbp]
+	\caption{The parameters of the PSO algorithm (the micro level algorithm) used to compute the fitness of a GA chromosome.}
+	\label{tab3PSO}
+		\begin{center}
+			\begin{tabular}{p{220pt}c}
+
+				\textbf{Parameter}& \textbf{Value} \\
+				\hline\hline
+ 				Number of generations& 50 \\
+ 				Number of function evaluations/generation& 10 \\
+ 				Number of dimensions of the function to be optimized& 5 \\
+ 				Learning factor $c_{1}$& 2 \\
+ 				Learning factor $c_{2}$ & 1.8\\
+ 				Inertia weight& 0.5 + $\frac{rand()}{2}$\\
+		
+			\end{tabular}
+		\end{center}
+\end{table}
+
+Algorithm example 
+
+$\ldots$ (see Algorithm \ref{NGalg}).
+
+
+\algsetup{indent=1em, linenosize=\footnotesize}
+
+\begin{algorithm}
+	\caption{SGA - Spin based Genetic AQlgorithm}
+	\label{NGalg}
+		\begin{algorithmic}
+
+
+			\STATE \textbf{BEGIN}
+  		\STATE @ Randomly create the initial GA population.
+  		\STATE @ Compute the fitness of each individual.
+  		\FOR{i=1 TO NoOfGenerations}
+  			\FOR{j=1 TO PopulationSize}
+  				\STATE p $\leftarrow$ RandomlySelectParticleFromGrid();
+  				\STATE n $\leftarrow$ RandomlySelectParticleFromNeighbors(p);
+  				\STATE @ Crossover(p, n, off);
+  				\STATE @ Compute energy $\Delta H$
+  				\IF {$\Delta H$ satisfy the Ising condition}
+  					\STATE @ Replace(p,off);
+  				\ENDIF
+  			\ENDFOR
+  		\ENDFOR
+  		\STATE \textbf{END}
+\end{algorithmic}
+\end{algorithm}
+
+
+\bibliographystyle{plain}
+\bibliography{BibAll}
+
+\end{document}
